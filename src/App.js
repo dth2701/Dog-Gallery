@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     // Wrap the entire app in the BrowserRouter to enable routing.
-    <Router>
+    <Router basename="/Dog-Gallery" >
       <div className="App">
         <Routes>
           {/* Route for the homepage which renders the SelectBreeds component. */}
