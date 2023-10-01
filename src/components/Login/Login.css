@@ -1,0 +1,147 @@
+.login-wrapper {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+}
+
+.login-wrapper h1{
+  padding: 4rem 0;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 4em;
+  color: white;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 5px 3px 5px #101010;
+}
+
+.login-content {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.login-content .login-image {
+  flex: 0 0 50%;
+}
+
+.login-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-content .login-form-wrapper{
+  flex: 0 0 50%;
+  background-color: #fff;
+}
+
+.login-form {
+  padding: 6.4rem 3.2rem;
+  text-align: center;
+}
+
+.login-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #dc004e;
+}
+
+.login-icon i {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 40px;
+}
+
+.login-form h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.input-item {
+  margin-bottom: 2rem;
+}
+
+.input-item label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  float: left;
+}
+
+.input-item input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 15px 20px;
+  outline: none;
+}
+
+.btn-submit {
+  padding: 1.2rem 4.2rem;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #dc004e;
+  cursor: pointer;
+  height: 100%;
+  width: unset;
+  background-image: none;
+}   
+
+.btn-submit:hover {
+  background-color: #ff0066;
+}
+
+.login-question {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.login-question span {
+  cursor: pointer;
+  color: #dc004e;
+  font-weight: 600;
+}
+
+.text-danger {
+  float: left;
+  color: red;
+}
+
+@media (max-width: 1024px) {
+  .login-content {
+      width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-content {
+      width: 700px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .login-content {
+      width: 100%;
+  }
+
+  .login-content .login-image,
+  .login-content .login-form-wrapper {
+      flex: 0 0 auto;
+      width: 100%;
+  }
+
+  .login-wrapper h1 {
+      margin-bottom: 0;
+      font-size: 2em;
+  }
+
+}

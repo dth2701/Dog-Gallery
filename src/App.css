@@ -1,16 +1,208 @@
-.App {
-  font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7;
-  padding: 20px;
-  min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 1.6rem;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8; 
+  background-image: url('./assets/background.png'); 
+  background-size: cover; /* cover the entire viewport */
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Component Styles */
+.selection-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 3.5rem; 
+  color: #fb965b; 
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.selection-container p {
+  color: #555555;
+  font-size: 1.8rem; 
+  text-align: center;
+  margin-bottom: 2rem; 
+  max-width: 800px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+h1 {
+  color: #fb965bcb; 
+  font-size: 50px; 
+  text-align: center; 
+  margin-bottom: 25px;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+  text-align: center; 
+  margin-bottom: 35px;
+}
+
+.breeds-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: stretch; 
+  justify-content: start; 
+}
+
+.breed-label {
+  font-size: 1.5rem;
+  flex: 1 0 calc((100% / 6) - 15px); 
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  transition: background-color 0.3s ease; /* smooth transition of background color */
+  position: relative;
+  display: inline-block; 
+
+}
+.breed-label input[type="checkbox"]:checked + span {
+  background-color: #ffc382;
+}
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.breed-label-selected {
+  background-color: #ffc382 !important;;
+}
+
+.breed-label span {
+  display: block;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;  /* Prevents the text from wrapping to the next line */
+  overflow: hidden;     /* Hides text that overflows the box */
+  text-overflow: ellipsis; /* cut-off text */
+}
+
+button {
+  display: block;
+  margin: 25px auto;
+  width: 80px;         
+  height: 80px;        
+  background-color: #ffc382;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;     
+  transition: background-color 0.3s ease-in-out;  
+  background-image: url('./assets/dogPaw.jpg'); 
+  background-size: 70px;  
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button:hover {
+  background-color: #e68033;
+  background-size: 50px;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .breed-label {
+    flex-basis: calc((100% / 3) - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .selection-container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px; 
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 25px; 
+  }
+  
+  button {
+    width: 60px;
+    height: 60px;  
+    background-size: 40px;  
+  }
+}
+
+@media (max-width: 600px) {
+  .breed-label {
+    flex-basis: calc((100% / 2) - 15px);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 1.6rem;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8; 
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .selection-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 900px;  
   background-color: #ffffff;
   padding: 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -35,22 +227,39 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  justify-content: space-between;
+  align-items: stretch; 
+  justify-content: start; 
 }
 
 .breed-label {
-  flex-basis: calc(33% - 15px); 
-  box-sizing: border-box;
+  font-size: 1.5rem;
+  flex-basis: calc((100% / 6) - 15px);
   padding: 15px;
   background-color: #f0f0f0;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: auto;
 }
 
 input[type="checkbox"] {
-  margin-right: 12px;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.breed-label input[type="checkbox"]:checked + span {
+  background-color: #ffc382;
+}
+
+.breed-label span {
+  display: block;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button {
@@ -61,21 +270,55 @@ button {
   background-color: #ffc382;
   color: #ffffff;
   border: none;
-  border-radius: 50%;  /* Make it a circle */
+  border-radius: 50%;
   cursor: pointer;
   font-size: 20px;     
   transition: background-color 0.3s ease-in-out;  
-  background-image: url('./assets/dogPaw.img'); 
+  background-image: url('./assets/dogPaw.jpg'); 
   background-size: 70px;  
   background-repeat: no-repeat;
   background-position: center;
 }
 
-
 button:hover {
   background-color: #e68033;
-  background-image: url('./assets/dogPaw.img'); 
-  background-size: 50px;  
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: 50px;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .breed-label {
+    flex-basis: calc((100% / 3) - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .selection-container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px; 
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 25px; 
+  }
+  
+  button {
+    width: 60px;
+    height: 60px;  
+    background-size: 40px;  
+  }
+}
+
+@media (max-width: 600px) {
+  .breed-label {
+    flex-basis: calc((100% / 2) - 15px);
+  }
 }

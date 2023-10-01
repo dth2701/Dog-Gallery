@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  background-color: rgba(0,0,0,.84);
+}
+
+.header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header nav h2 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header nav button {
+  width: 8rem;
+  margin: 0;
+  height: 100%;
+  padding: 8px 0;
+  background: #ffff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: black;
+}
+
+.header nav button:hover {
+  background-color: #ccc;
+}
+
+.header nav button i {
+  margin-right: 0.5rem;
+}
