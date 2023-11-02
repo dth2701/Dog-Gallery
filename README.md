@@ -1,4 +1,4 @@
-For this exercise, please use Dog API to build an application where users can view an image gallery of their favorite dog breeds.
+Use Dog API to build an application where users can view an image gallery of their favorite dog breeds.
 
 Users should be able to select one or more dog breeds.
 Selecting a breed should display images of that breed in the gallery.
